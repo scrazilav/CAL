@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HitungKalori - Penghitung Kalori Harian</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HitungKalori - Penghitung Kalori Harian</h1>
+    </header>
+
+    <section class="form-container">
+        <form id="kaloriForm">
+            <label for="gender">Jenis Kelamin:</label>
+            <input type="radio" name="gender" value="laki-laki" checked>Laki-laki
+            <input type="radio" name="gender" value="wanita">Wanita
+
+            <label for="berat">Berat Badan (kg):</label>
+            <input type="number" id="berat" required>
+
+            <label for="tinggi">Tinggi Badan (cm):</label>
+            <input type="number" id="tinggi" required>
+
+            <label for="usia">Usia (tahun):</label>
+            <input type="number" id="usia" required>
+
+            <label for="aktivitas">Tingkat Aktivitas:</label>
+            <select id="aktivitas">
+                <option value="sedentary">Tidak Aktif</option>
+                <option value="light">Aktivitas Ringan</option>
+                <option value="moderate">Aktivitas Sedang</option>
+                <option value="active">Aktivitas Berat</option>
+                <option value="extra">Aktivitas Sangat Berat</option>
+            </select>
+
+            <button type="button" onclick="hitungKalori()">Hitung Kalori</button>
+        </form>
+    </section>
+
+    <section id="hasil" style="display:none;">
+        <h2>Hasil Perhitungan</h2>
+        <p id="bmrResult"></p>
+        <p id="kaloriResult"></p>
+        <p id="aktivitasKeterangan" style="font-style:italic; color:#4CAF50;"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HitungKalori. Semua Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
